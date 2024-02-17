@@ -45,6 +45,6 @@ class User extends Authenticatable
     ];
     public $timestamps = false;
     public function area(){
-        return  $this->hasMany(Area::class , 'parent_area_id');
+        return  $this->hasMany(Area::class , 'parent_area_id' , 'id');
     }
 }

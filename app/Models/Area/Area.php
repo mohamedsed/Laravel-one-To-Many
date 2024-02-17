@@ -12,6 +12,6 @@ class Area extends Model
     protected $fillable =['parent_area_id' , 'name'];
    public $timestamps = false;
     public function user(){
-        return $this->belongsTo(User::class , 'parent_area_id');
+        return $this->belongsTo(User::class , 'parent_area_id' , 'id');
     }
 }

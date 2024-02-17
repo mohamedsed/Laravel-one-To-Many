@@ -17,7 +17,8 @@ use App\Http\Controllers\RelationsController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('user' ,[ RelationsController::class , 'getUser']);
+Route::get('user' ,[ RelationsController::class , 'getUser'])->name('all.user');
 Route::get('all-area' ,[ RelationsController::class , 'showArea']);
 
 Route::get('user-area/{user_id}' ,[ RelationsController::class , 'getArea'])->name('user.area');
+Route::get('delete-user/{user_id}' ,[ RelationsController::class , 'deleteUser'])->name('user.delete');
